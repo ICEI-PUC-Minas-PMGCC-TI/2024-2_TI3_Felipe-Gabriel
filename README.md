@@ -1,18 +1,15 @@
 # Nome do projeto
 
-Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
+Tecnicas de Renderização em Tempo Real
 
 ## Alunos integrantes da equipe
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
+* Felipe Vilhena Dias
+* Gabriel Cunha Schlegel
 
 ## Professores responsáveis
 
-* Nome do professor 1
-* Nome do professor 2
-* Nome do professor 3
-* Nome do professor 3
+* Leonardo Vilela Cardoso
 
 ## Instruções de Replicação/Reprodução
 
