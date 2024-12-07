@@ -1,0 +1,162 @@
+% Modelo de Dissertação do Mestrado em Informática da PUC - Alterado para cumprir a normalização de 2011
+\documentclass[a4paper,brazil,ruledheader,normaltoc,capchap,twoside,openany]{abnt_pucmg_utf8}
+
+\let\cleardoublepage\clearpage
+
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]{\huge\bfseries}{\thechapter}{1em}{}
+\titlespacing*{\chapter}{0pt}{*0}{20pt} % Ajusta espaçamentos antes/depois do capítulo
+
+% Pacotes e configurações adicionais
+\usepackage[a4paper,left=3cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+\usepackage[printonlyused]{acronym}
+\usepackage{multirow}
+%\usepackage[alf, abnt-emphasize=em, abnt-thesis-year=title]{abntcite}
+\usepackage{abnt-PPGInf-PUCMG}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[symbol]{footmisc}
+\usepackage[all]{xy}
+\usepackage{url,amsmath}
+\usepackage{amssymb}
+\usepackage[portuguese, linesnumbered, ruled, vlined]{algorithm2e}
+\usepackage{algorithmic}
+\usepackage{listings}
+\usepackage{setspace}
+\usepackage{rotating}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{colortbl}
+\usepackage[size=normalsize,labelfont=bf,textfont={bf},labelsep=endash]{caption}
+\captionsetup[subfloat]{labelfont=bf,textfont={bf}}
+\usepackage{paralist}
+\captionsetup{figurewithin=none}
+\captionsetup{tablewithin=none}
+\setlength{\LTcapwidth}{\textwidth}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+\usepackage{subfig}
+
+\usepackage[backend=biber,style=abnt]{biblatex}
+\addbibresource{referencias.bib} % Replace 'referencias.bib' with your .bib file name
+
+
+% Configuração de código-fonte
+\lstset{extendedchars=\true,
+ inputencoding=utf8,
+ literate={\$}{{\$}}1,
+ commentstyle=\it,
+ stringstyle=\bf,
+ belowcaptionskip=5pt,
+ numbers=left,
+ stepnumber=1,
+ firstnumber=1,
+ numberstyle=\tiny,
+ breaklines=true,
+ frame=tb,
+ basicstyle=\footnotesize,
+ stringstyle=\ttfamily,
+ showstringspaces=false,
+ mathescape,
+ tabsize=3
+}
+
+
+\renewcommand{\lstlistingname}{Código}
+\renewcommand{\lstlistlistingname}{Lista de Códigos}
+%\citeoption{abnt-etal-cite=1, abnt-and-type=e}
+
+% Ajuste de espaçamento para títulos e listas
+\makeatletter
+\renewcommand\numberline[1]{
+	\leftskip 0em
+	\rightskip 1.6em
+	\parfillskip -\rightskip
+	\parindent 0em
+	\@tempdima 2.0em
+	\vspace{0em} \advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
+	%FIGURA
+    \normalfont #1 -- }
+\makeatother
+
+\begin{document}
+
+% Para forçar que elementos pré-textuais sejam impressos no anverso da folha
+\setboolean{@twoside}{false}
+
+\autor{Felipe Vilhena Dias \\ Gabriel Cunha Schlegel}
+
+% Título do trabalho
+\titulo{Técnicas de Renderização em Tempo Real para Jogos Digitais: Avanços e Desafios}
+
+% Comentário
+\comentario{Projeto de Pesquisa apresentado na disciplina Trabalho Interdisciplinar III - Pesquisa Aplicada do curso de Ciência da Computação da Pontifícia Universidade Católica de Minas Gerais.}
+
+% Instituição
+\instituicao{Ciência da Computação \par Instituto de Ciências Exatas e Informática \par Pontifícia Universidade Católica de Minas Gerais}
+
+% Local e Data
+\local{Belo Horizonte}
+\data{2024}
+
+% Capa e Folha de Rosto
+\capa
+\setboolean{@twoside}{true}
+\folhaderosto
+
+% Resumo Extenso
+\begin{resumo}
+A renderização em tempo real é essencial no desenvolvimento de jogos digitais modernos, permitindo gráficos de alta qualidade que respondem às interações do usuário. Entre as principais técnicas destacam-se rasterização avançada, \textit{ray tracing}, oclusão de ambiente e algoritmos de sombreamento. O \textit{ray tracing} em tempo real trouxe avanços significativos em realismo, porém enfrenta desafios de desempenho. Soluções híbridas que combinam \textit{ray tracing} com rasterização têm sido empregadas para equilibrar qualidade visual e taxa de quadros.
+
+Outro aspecto importante é a \textit{Global Illumination} (GI), que utiliza abordagens como \textit{Reflective Shadow Maps} (RSM), \textit{Screen Space Reflections} (SSR) e \textit{Screen Space Ambient Occlusion} (SSAO) para simular iluminação indireta e reflexos. O avanço das GPUs modernas, com núcleos dedicados ao \textit{ray tracing}, tem possibilitado a execução eficiente dessas técnicas.
+
+Desafios persistem na otimização do desempenho, sendo aplicadas técnicas como \textit{Level of Detail} (LoD) e \textit{culling} para manter uma boa taxa de quadros. Tendências futuras incluem o uso de inteligência artificial e \textit{cloud gaming} para aprimorar a renderização. Conclui-se que o equilíbrio entre qualidade gráfica e desempenho será alcançado por meio de inovações em algoritmos e hardware.
+
+
+\vspace{0.5cm}
+\noindent \textbf{Palavras-chave:} Renderização em Tempo Real, Jogos Digitais, Ray Tracing, GPUs, Técnicas de Sombreamento, Otimização.
+\end{resumo}
+
+% Sumário
+\tableofcontents
+
+% Altera para espaçamento 1,5 a partir daqui
+\onehalfspacing
+
+% TEXTUAIS
+\setboolean{@twoside}{true}
+\setcounter{page}{7}
+
+% Capítulo de Introdução
+\chapter{Introdução}
+
+A renderização em tempo real é uma técnica que permite a geração de imagens com alta qualidade e velocidade, essencial para criar experiências imersivas em jogos digitais. Com o avanço das tecnologias de hardware e software, desenvolvedores de jogos têm sido capazes de alcançar níveis de realismo visual que eram inimagináveis há apenas alguns anos. Essas técnicas não apenas melhoram a aparência dos jogos, mas também influenciam diretamente a jogabilidade e a experiência do usuário, criando mundos virtuais que são visualmente impressionantes e responsivos às ações dos jogadores.
+
+*“O campo da renderização em tempo real tem visto avanços significativos, especialmente com a introdução do ray tracing em tempo real, que promete transformar a maneira como os gráficos são processados em jogos”* (Smith, 2020). Esta citação destaca a importância das novas técnicas de renderização que estão sendo exploradas atualmente, como o ray tracing em tempo real, que permite simular de forma precisa a interação da luz com os objetos em uma cena, criando efeitos de iluminação e sombras extremamente realistas. No entanto, a implementação dessas técnicas traz consigo desafios significativos, como a necessidade de otimização para manter o desempenho necessário para uma experiência de jogo fluida.
+
+% Capítulos subsequentes
+\setboolean{@openright}{false}
+\include{texto/revisao}
+\include{texto/metodologia}
+\include{texto/capEx1}
+\include{texto/capEx2}
+\include{texto/capEx3}
+\include{texto/capEx4}
+\include{texto/capEx5}
+
+% Bibliografia
+\renewcommand{\bibname}{Referências}
+\printbibliography
+
+
+% Apêndices e Anexos (se necessário)
+%\setboolean{@openright}{true}
+%\apendice
+%\begin{apendice}
+%\include{pos-texto/apendiceA}
+%\end{apendice}
+
+%\anexo
+%\include{pos-texto/anexo}
+
+\end{document}

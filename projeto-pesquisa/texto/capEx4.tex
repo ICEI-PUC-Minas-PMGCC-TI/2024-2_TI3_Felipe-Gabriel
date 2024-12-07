@@ -1,0 +1,34 @@
+\makeatletter
+\renewcommand{\chapter}{%
+  \if@openright\cleardoublepage\else\clearpage\fi % Remove quebra padrão
+  \secdef{\@chapter}{\@schapter}}
+\makeatother
+\chapter{Discussão dos Resultados}
+
+Neste capítulo, será realizada uma análise detalhada dos resultados obtidos ao longo do estudo das técnicas de renderização em tempo real aplicadas aos jogos digitais. A discussão aborda as principais descobertas, comparando-as com a literatura existente, e considera as implicações práticas para desenvolvedores e jogadores.
+
+\section{Análise das Técnicas de Renderização}
+Ao longo do estudo, observou-se que as técnicas de renderização em tempo real, como o \textit{Ray Tracing} e a \textit{Global Illumination}, têm contribuído significativamente para a qualidade visual dos jogos, proporcionando um nível de realismo sem precedentes. No entanto, esses avanços também apresentam desafios, como o alto custo computacional e a necessidade de otimizações constantes para manter o desempenho em níveis aceitáveis.
+
+Comparando com os estudos revisados, os resultados obtidos indicam que, embora os desenvolvedores tenham feito progressos na implementação dessas técnicas, a adaptação às diferentes plataformas continua a ser uma barreira importante. Jogos como \textit{Cyberpunk 2077}, que utilizam \textit{Ray Tracing} em tempo real, exemplificam essa dualidade, pois, embora proporcionem gráficos de alta qualidade, exigem hardware de ponta para garantir um desempenho fluido.
+
+\section{Desempenho x Qualidade Visual}
+A relação entre desempenho e qualidade visual continua sendo um dos principais dilemas enfrentados pelos desenvolvedores. A pesquisa revelou que, para muitos jogos modernos, a implementação de técnicas avançadas de renderização compromete o desempenho em plataformas com hardware limitado. No entanto, o uso de tecnologias como o \textit{DLSS} e as implementações híbridas de \textit{Ray Tracing} têm demonstrado que é possível alcançar um equilíbrio entre esses dois aspectos, embora com a necessidade de realizar ajustes finos em cada plataforma.
+
+Por exemplo, em jogos como \textit{Call of Duty: Modern Warfare}, a utilização de técnicas híbridas conseguiu melhorar a qualidade visual sem impactar significativamente o desempenho, uma abordagem que pode ser vista como uma solução viável para jogos de alta intensidade gráfica.
+
+\section{Sustentabilidade e Eficiência Energética}
+Outro ponto de destaque nesta pesquisa foi a questão da sustentabilidade. Com a crescente demanda por gráficos de alta qualidade, o consumo energético das GPUs tem aumentado, o que levanta preocupações ambientais. O estudo mostrou que as soluções de renderização em nuvem e a evolução das arquiteturas de hardware mais eficientes são essenciais para reduzir o impacto ambiental.
+
+Embora as soluções baseadas em nuvem, como o Google Stadia, ainda enfrentem desafios relacionados à latência e à conectividade, elas representam um passo importante em direção à otimização energética no desenvolvimento de jogos, permitindo que dispositivos menos potentes acessem gráficos avançados sem sobrecarregar os sistemas locais.
+
+\section{O Futuro da Renderização em Jogos Digitais}
+A análise dos resultados também aponta para um futuro promissor para a renderização em tempo real, impulsionado pela adoção de inteligência artificial, como o uso de IA para melhorar a qualidade da imagem em tempo real (por meio de técnicas como o \textit{DLSS}) e pela evolução contínua das GPUs. Espera-se que, no futuro, a implementação de \textit{Ray Tracing} se torne mais acessível, permitindo que uma maior gama de dispositivos suporte esses gráficos avançados.
+
+Além disso, a integração de novas tecnologias, como o uso de redes neurais para otimização de renderização e a melhoria na integração com plataformas de Realidade Virtual e Aumentada, pode criar novas formas de interação e imersão para os jogadores.
+
+\section{Implicações Práticas para os Desenvolvedores}
+Por fim, os resultados desta pesquisa têm implicações práticas importantes para os desenvolvedores de jogos. A necessidade de otimização constante, a escolha de técnicas híbridas e a consideração das especificações de hardware das plataformas alvo são fatores cruciais para garantir uma experiência de jogo satisfatória.
+
+Desenvolvedores devem considerar o uso de técnicas como \textit{Ray Tracing} de forma equilibrada, optando por implementações híbridas que permitam um bom desempenho, sem abrir mão da qualidade visual, especialmente em jogos multijogador onde a fluidez é essencial.
+

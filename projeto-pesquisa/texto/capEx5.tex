@@ -1,0 +1,40 @@
+\makeatletter
+\renewcommand{\chapter}{%
+  \if@openright\cleardoublepage\else\clearpage\fi % Remove quebra padrão
+  \secdef{\@chapter}{\@schapter}}
+\makeatother
+\chapter{Conclusão e Trabalhos Futuros}
+
+Neste capítulo, são apresentadas as conclusões do estudo sobre técnicas de renderização em tempo real para jogos digitais, bem como as sugestões para trabalhos futuros que podem expandir ou aprofundar as questões discutidas. A análise foi baseada nos avanços recentes, desafios persistentes e nas aplicações práticas dessas técnicas no desenvolvimento de jogos.
+
+\section{Conclusões}
+A renderização em tempo real tem se consolidado como um dos pilares da experiência imersiva em jogos digitais. Técnicas avançadas como \textit{Ray Tracing}, \textit{Global Illumination}, e o uso de inteligência artificial, como o \textit{Deep Learning Super Sampling} (DLSS), possibilitaram avanços significativos na qualidade visual dos jogos, resultando em gráficos mais realistas e dinâmicos. No entanto, essas inovações também introduzem desafios técnicos, principalmente em relação ao alto custo computacional e à necessidade de equilibrar desempenho e qualidade visual, especialmente em plataformas mais limitadas.
+
+Além disso, os desafios relacionados ao consumo de energia das GPUs e a sustentabilidade na renderização em tempo real também são questões que precisam ser abordadas para garantir que os avanços não comprometam o meio ambiente ou a acessibilidade dos jogos a um público maior.
+
+A implementação de técnicas híbridas, que combinam métodos tradicionais com técnicas modernas, tem mostrado ser uma abordagem promissora para alcançar o equilíbrio entre qualidade e desempenho. A crescente adoção dessas técnicas pelos desenvolvedores de jogos, juntamente com o desenvolvimento de hardwares mais eficientes, indica um futuro promissor para a renderização em tempo real.
+
+\section{Trabalhos Futuros}
+Embora este estudo tenha fornecido uma visão abrangente sobre as técnicas de renderização em tempo real e seus desafios, ainda existem várias áreas que merecem aprofundamento em pesquisas futuras. Alguns dos possíveis caminhos incluem:
+
+\begin{itemize}
+    \item \textbf{Otimização de Algoritmos de Ray Tracing:} A busca por algoritmos mais eficientes que reduzam o custo computacional do \textit{Ray Tracing} e que possam ser aplicados em uma maior variedade de dispositivos, incluindo consoles e dispositivos móveis, é uma área crítica de pesquisa.
+    
+    \item \textbf{Renderização Adaptativa:} Investigar novas abordagens para renderização adaptativa, que ajustem a qualidade visual dinamicamente com base nos recursos disponíveis do sistema, garantindo uma experiência consistente em diversas plataformas.
+    
+    \item \textbf{Integração de IA na Renderização:} Explorar o uso de redes neurais e outras técnicas de inteligência artificial para otimizar a renderização em tempo real, como a utilização de IA para predição de iluminação ou para melhorar a qualidade de texturas e sombras.
+    
+    \item \textbf{Impacto Ambiental da Renderização:} Estudar soluções mais sustentáveis para reduzir o impacto ambiental da renderização em tempo real, explorando o uso de tecnologias como a renderização em nuvem ou otimizações de hardware que reduzam o consumo energético.
+    
+    \item \textbf{Experiências Imersivas em Realidade Virtual e Aumentada:} A pesquisa de técnicas de renderização otimizadas para ambientes de realidade virtual (VR) e aumentada (AR) pode criar novas fronteiras de interação no universo dos jogos, proporcionando experiências ainda mais imersivas.
+    
+    \item \textbf{Aplicações em Jogos Multijogador:} A renderização em tempo real em jogos multijogador massivos continua sendo um desafio devido à sincronização de gráficos em tempo real para múltiplos jogadores. Pesquisas focadas em melhorar o desempenho gráfico sem comprometer a sincronização e a fluidez serão essenciais para o desenvolvimento de novos jogos multijogador.
+\end{itemize}
+
+Essas áreas de pesquisa podem não apenas aprimorar as técnicas de renderização, mas também expandir as possibilidades de criação de mundos virtuais mais imersivos e acessíveis.
+
+\section{Considerações Finais}
+A renderização em tempo real continua a ser um campo dinâmico e de grande importância no desenvolvimento de jogos digitais. Com o rápido avanço das tecnologias, como o \textit{Ray Tracing} e a renderização baseada em inteligência artificial, o futuro da indústria de jogos parece promissor. No entanto, é fundamental que os desenvolvedores considerem tanto os desafios técnicos quanto as questões ambientais e de acessibilidade para garantir uma evolução sustentável e inclusiva.
+
+A busca por soluções que permitam a renderização de gráficos impressionantes em dispositivos de diferentes capacidades, sem sacrificar o desempenho ou a sustentabilidade, será crucial para o futuro dos jogos digitais. Assim, a colaboração contínua entre as comunidades de pesquisa e indústria, juntamente com a inovação tecnológica, será a chave para superar os desafios atuais e explorar novas possibilidades no campo da renderização em tempo real.
+14414
